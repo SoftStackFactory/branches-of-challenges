@@ -14,3 +14,19 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.toolbar-background-md {
+    background: #39864c;
+}
+div.toolbar-title {
+    color: white;
+}
+.button-inner {
+    color: white;
+}
+ion-content {
+    border-left: 5px solid #39864c;
+    border-right: 5px solid #39864c;
+}
+.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    background-image: none;
+}
