@@ -1,13 +1,36 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
+    
     <ion-title>Page One</ion-title>
+    <ion-buttons left>
+      <button ion-button menuToggle="main-menu">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    
+    <ion-buttons right>
+      <button ion-button menuToggle="group-menu">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    
+    
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+    
+    <!--<ion-buttons start>-->
+      <button ion-button menuToggle="main-menu">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <!--<ion-buttons>-->
+      
+    <!--</ion-buttons end>-->
+      <button ion-button menuToggle="group-menu">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    <!--</ion-buttons>-->
   <h3>Ionic Menu Starter</h3>
 
   <p>
