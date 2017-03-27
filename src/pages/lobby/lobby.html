@@ -25,13 +25,13 @@
   
   <ion-navbar class="custom-segment" text-center>
     <ion-title>
-      <span>
+      <span (click)="currentSegment = 'drafts'">
         Drafts
       </span>
-      <span>
+      <span (click)="currentSegment = 'posts'">
         Posts
       </span>
-      <span>
+      <span (click)="currentSegment = 'craete'">
         Create
       </span>
     </ion-title>
@@ -41,5 +41,15 @@
 
 
 <ion-content padding>
-  
+  <h3 text-center [ngSwitch]="currentSegment">
+    <span *ngSwitchCase="'drafts'">
+      Drafts
+    </span>
+    <span *ngSwitchCase="'posts'">
+      Posts
+    </span>
+    <span *ngSwitchCase="'create'">
+      Create
+    </span>
+  </h3>
 </ion-content>
