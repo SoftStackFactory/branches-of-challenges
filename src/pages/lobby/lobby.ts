@@ -36,8 +36,10 @@ export class LobbyPage {
     console.log('ionViewDidLoad LobbyPage');
   }
   
-  scheduleClicked() {
-    this.navCtrl.push(ScheduleViewPage);
+  scheduleClicked(schedule) {
+    this.navCtrl.push(ScheduleViewPage, {
+      "schedule": schedule
+    });
   }
 
 }

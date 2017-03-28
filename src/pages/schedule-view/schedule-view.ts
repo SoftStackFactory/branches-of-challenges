@@ -12,11 +12,12 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'schedule-view.html'
 })
 export class ScheduleViewPage {
-
+  schedule: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ScheduleViewPage');
+    this.schedule = this.navParams.schedule;
   }
 
 }
