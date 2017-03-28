@@ -21,12 +21,12 @@ export class LobbyPage {
     "2017-03-26T23:55:42.477Z",
     "2017-03-27T23:55:42.477Z"
   ]
-  drafts: String[] = {
+  drafts: String[] = [
     "2017-03-28T23:55:42.477Z",
     "2017-03-29T23:55:42.477Z",
     "2017-03-30T23:55:42.477Z",
     "2017-03-31T23:55:42.477Z"
-  }
+  ]
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
