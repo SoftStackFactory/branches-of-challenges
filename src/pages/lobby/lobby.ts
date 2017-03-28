@@ -12,7 +12,7 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'lobby.html'
 })
 export class LobbyPage {
-  currentSegment = "drafts"
+  currentSegment = "posts"
   posts: String[] = [
     "2017-03-22T23:55:42.477Z",
     "2017-03-23T23:55:42.477Z",

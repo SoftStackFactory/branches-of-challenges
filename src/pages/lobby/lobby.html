@@ -41,15 +41,29 @@
 
 
 <ion-content padding>
-  <h3 text-center [ngSwitch]="currentSegment">
+  <span text-center [ngSwitch]="currentSegment">
     <span *ngSwitchCase="'drafts'">
-      Drafts
+      <h3>Drafts</h3>
+      <!-- Uncomment this ion-list and figure out why the ngFor is throwing an error -->
+      <!--<ion-list>-->
+      <!--  <ion-item *ngFor="draft of drafts">-->
+      <!--    {{draft | date: 'EEEE, MMMM d, y'}}-->
+      <!--  </ion-item>-->
+      <!--</ion-list>-->
     </span>
+    
     <span *ngSwitchCase="'posts'">
-      Posts
+      <h3>Posts</h3>
+      <!-- This works -->
+      <ion-list>
+        <ion-item *ngFor="let post of posts">
+          {{post | date: 'EEEE, MMMM d, y'}}
+        </ion-item>
+      </ion-list>
     </span>
+    
     <span *ngSwitchCase="'create'">
-      Create
+      <h3>Create</h3>
     </span>
-  </h3>
+  </span>
 </ion-content>
