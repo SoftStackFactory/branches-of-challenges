@@ -17,7 +17,7 @@ export class ScheduleViewPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ScheduleViewPage');
-    this.schedule = this.navParams.schedule;
+    this.schedule = this.navParams.get("schedule");
   }
 
 }

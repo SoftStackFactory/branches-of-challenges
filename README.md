@@ -6,7 +6,8 @@ javascript console, elements, application, and eventually the network tabs.
 
 ## Challenges
 ### Easy:
-1. ch-easy-01 - HTML: the switch case is not working for the lobby page when I click on "Create" it does not show the header for the create page.
+
+1. ch-easy-01 - HTML: On the LobbyPage, when I click on the subheader segment area, I should be able to see the content of the page switch between showing "Drafts", "Posts", and "Create" depending on which segment I clicked on. This works up until I click on "Create", instead of seeing "Create" it shows a blank content screen.
 2. ch-easy-02 - TS: something is wrong with the transpiling, figure out what and solve it.
 
 
