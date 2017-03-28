@@ -1,4 +1,4 @@
-<ion-menu id="main-menu" side="left" [content]="content" swipeEnabled="false">
+<ion-menu id="main-menu" side="left" [content]="content" swipeEnabled="true">
   <ion-header>
     <ion-toolbar>
       <ion-title>Main Menu</ion-title>
@@ -8,21 +8,13 @@
   <ion-content>
     <ion-list>
       <span *ngFor="let category of mainMenu">
-        <ion-list-header>
-          {{category.header}}
-        </ion-list-header>
-        <button menuClose ion-item *ngFor="let item of category.content" (click)="item.method ? item.method(item.content) : category.method ? category.method(item.content) : notDefined(item.content)">
-          {{item.title}}
-          <ion-note style="float: right;">
-            {{item.note}}
-          </ion-note>
-        </button>
+        
       </span>
     </ion-list>
   </ion-content>
 </ion-menu>
 
-<ion-menu id="group-menu" side="right" [content]="content" swipeEnabled="false">
+<ion-menu id="group-menu" side="right" [content]="content" swipeEnabled="true">
   <ion-header>
     <ion-toolbar>
       <ion-title>Group Menu</ion-title>
