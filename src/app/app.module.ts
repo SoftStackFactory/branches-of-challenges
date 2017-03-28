@@ -2,13 +2,15 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { LobbyPage } from '../pages/lobby/lobby';
+import { ScheduleViewPage } from '../pages/schedule-view/schedule-view';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 let injections = [
   MyApp,
-  LobbyPage
+  LobbyPage,
+  ScheduleViewPage
 ]
 
 @NgModule({
