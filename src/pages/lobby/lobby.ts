@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+import { ScheduleViewPage } from './../schedule-view/schedule-view';
+
 /*
   Generated class for the Lobby page.
 
@@ -32,6 +34,10 @@ export class LobbyPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LobbyPage');
+  }
+  
+  scheduleClicked() {
+    this.navCtrl.push(ScheduleViewPage);
   }
 
 }
