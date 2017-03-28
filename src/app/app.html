@@ -7,9 +7,17 @@
 
   <ion-content>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
+      <span *ngFor="let category of mainMenu">
+        <ion-list-header>
+          {{category.header}}
+        </ion-list-header>
+        <button menuClose ion-item *ngFor="let item of category.content" (click)="item.method ? item.method(item.content) : category.method ? category.method(item.content) : notDefined(item.content)">
+          {{item.title}}
+          <ion-note style="float: right;">
+            {{item.note}}
+          </ion-note>
+        </button>
+      </span>
     </ion-list>
   </ion-content>
 </ion-menu>
@@ -17,15 +25,23 @@
 <ion-menu id="group-menu" side="right" [content]="content">
   <ion-header>
     <ion-toolbar>
-      <ion-title>Group Settings</ion-title>
+      <ion-title>Group Menu</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
     <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
+      <span *ngFor="let category of groupMenu">
+        <ion-list-header>
+          {{category.header}}
+        </ion-list-header>
+        <button menuClose ion-item *ngFor="let item of category.content" (click)="item.method ? item.method(item.content) : category.method ? category.method(item.content) : notDefined(item.content)">
+          {{item.title}}
+          <ion-note style="float: right;">
+            {{item.note}}
+          </ion-note>
+        </button>
+      </span>
     </ion-list>
   </ion-content>
 </ion-menu>

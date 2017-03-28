@@ -12,7 +12,7 @@ javascript console, elements, application, and eventually the network tabs.
 
 
 ### Medium:
-1. ch-medium-01 - HTML: the *ngFor is working on the posts, but not the drafts. Solve the issue.
+1. ch-medium-01 - HTML: the *ngFor is working on the posts, but not the drafts.
 2. ch-medium-02 - Providers: I decided to move the location of the test data form my LobbyPage component to a provider named DummyData, I expect the app to function normally. Instead of it working normally, I am getting another transpiling error. First thing I did, was run `ionic g provider DummyData`. Next, I imported it into the app.module.ts and injected it to the providers array. Then I imported it into the lobby.ts and re-defined it as dummyData inside the constructor. I moved the data that is currently being set to posts and drafts to be located in the DummyData provider. I created two functions in the DummyData provider to return either posts or drafts. I then retrieve the data from the DummyData provider inside the LobbyPage ts file.
 
 
