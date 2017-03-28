@@ -51,9 +51,45 @@ export class MyApp {
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
-    this.mainMenu = [];
+    this.mainMenu = [{
+      header: "Your Groups",
+      method: this.notDefined,
+      content: []
+    }, {
+      header: "Settings",
+      method: this.notDefined,
+      content: [{
+        title: 'Profile',
+        method: undefined,
+        content: {}
+      },{
+        title: 'Tutorial',
+        method: undefined,
+        content: {}
+      },{
+        title: 'Feedback',
+        method: undefined,
+        content: {}
+      },{
+        title: 'EULA',
+        method: undefined,
+        content: {}
+      },{
+        title: 'Sign Out',
+        method: undefined,
+        content: {}
+      }]
+    }];
     for(let category of this.mainMenu) {
-      
+      if(category.header == "Your Groups") {
+        this.yourGroups.forEach(group => {
+          category.content.push({
+            title: group.name,
+            // note: member.role,
+            content: group
+          })
+        })
+      }
     }
     
     this.groupMenu = [{
