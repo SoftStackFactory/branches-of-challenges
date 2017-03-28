@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { ScheduleViewPage } from './../schedule-view/schedule-view';
+import { DummyData } from './../../providers/dummy-data';
 
 /*
   Generated class for the Lobby page.
@@ -15,25 +16,18 @@ import { ScheduleViewPage } from './../schedule-view/schedule-view';
 })
 export class LobbyPage {
   currentSegment = "posts"
-  posts: String[] = [
-    "2017-03-22T23:55:42.477Z",
-    "2017-03-23T23:55:42.477Z",
-    "2017-03-24T23:55:42.477Z",
-    "2017-03-25T23:55:42.477Z",
-    "2017-03-26T23:55:42.477Z",
-    "2017-03-27T23:55:42.477Z"
-  ]
-  drafts: String[] = [
-    "2017-03-28T23:55:42.477Z",
-    "2017-03-29T23:55:42.477Z",
-    "2017-03-30T23:55:42.477Z",
-    "2017-03-31T23:55:42.477Z"
-  ]
+  posts: String[]
+  drafts: String[]
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public dummyData: DummyData) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LobbyPage');
+    this.posts = this.dummyData.getPosts();
+    this.drafts = this.dummyData.getDrafts();
   }
   
   scheduleClicked(schedule) {
