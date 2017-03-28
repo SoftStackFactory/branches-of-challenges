@@ -7,7 +7,7 @@ import { LobbyPage } from '../pages/lobby/lobby';
 import { ScheduleViewPage } from '../pages/schedule-view/schedule-view';
 
 // Our Providers
-import { DummyData } from './../../providers/dummy-data';
+import { DummyData } from './../providers/dummy-data';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
