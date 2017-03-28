@@ -31,7 +31,7 @@ export class DummyData {
   }
   
   getPosts() {
-    this.posts;
+    return this.posts;
   }
   getDrafts() {
     return this.drafts;
